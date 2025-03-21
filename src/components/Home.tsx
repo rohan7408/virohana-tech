@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/** @jsxImportSource react */
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import Footer from './Footer';
@@ -409,7 +410,7 @@ const Home = () => {
             <div className="bg-[#1a103c] bg-opacity-50 backdrop-blur-xl rounded-3xl p-12 md:p-16 border border-[#42dcdb20] shadow-[0_0_30px_rgba(66,220,219,0.1)]">
               <div className="flex flex-col md:flex-row gap-16 items-start">
                 {/* Image Container */}
-                <div className="flex-1 relative order-2 md:order-1 sticky top-8">
+                <div className="flex-1 order-2 md:order-1 sticky top-8">
                   <div className="relative w-full aspect-[3/4] max-w-xl mx-auto">
                     <div className="absolute inset-0 bg-gradient-to-r from-[#42dcdb33] to-[#8558ff33] rounded-3xl blur-3xl"></div>
                     <div className="relative z-1 rounded-3xl overflow-hidden border-2 border-[#42dcdb20] shadow-[0_0_30px_rgba(66,220,219,0.2)]">
