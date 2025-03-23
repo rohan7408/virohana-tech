@@ -1,12 +1,10 @@
 /** @jsxImportSource react */
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CountUp from 'react-countup';
 import Footer from './Footer';
+import Nav from './Nav';
 
 const Home = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
     <div className="relative min-h-screen bg-[#0f1729]">
       {/* Hero Section with Gradient Background */}
@@ -58,156 +56,7 @@ const Home = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(66,220,219,0.1)_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-30"></div>
         
         <div className="relative z-10">
-          {/* Navigation Bar */}
-          <nav className="bg-transparent py-4">
-            <div className="container mx-auto px-6 flex items-center justify-between">
-              {/* Logo */}
-              <div className="flex items-center">
-                <Link to="/" className="text-[#42dcdb] text-2xl font-normal font-['Bruno_Ace_SC'] hover:text-[#8558ff] transition-colors duration-300">
-                  Virohana Tech
-                </Link>
-              </div>
-
-              {/* Hamburger Menu for Mobile */}
-              <div className="md:hidden">
-                <button
-                  onClick={() => setIsMenuOpen(!isMenuOpen)}
-                  className="relative w-10 h-10 focus:outline-none group"
-                >
-                  <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    {/* Hamburger Lines with Animation */}
-                    <span className={`block w-8 h-[2px] bg-[#42dcdb] rounded-full transition-all duration-300 mb-2 
-                      ${isMenuOpen ? 'rotate-45 translate-y-2.5 bg-[#8558ff]' : ''}`}></span>
-                    <span className={`block w-8 h-[2px] bg-[#42dcdb] rounded-full transition-all duration-300 mb-2
-                      ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                    <span className={`block w-8 h-[2px] bg-[#42dcdb] rounded-full transition-all duration-300
-                      ${isMenuOpen ? '-rotate-45 -translate-y-2.5 bg-[#8558ff]' : ''}`}></span>
-                  </div>
-                  
-                  {/* Glowing Effect */}
-                  <div className={`absolute inset-0 rounded-full transition-all duration-300
-                    ${isMenuOpen ? 'shadow-[0_0_15px_rgba(133,88,255,0.3)]' : 'shadow-[0_0_15px_rgba(66,220,219,0.3)]'}`}></div>
-                </button>
-              </div>
-
-              {/* Mobile Menu */}
-              <div className={`md:hidden fixed inset-0 bg-[#0f1729] bg-opacity-95 backdrop-blur-xl transform transition-transform duration-300 ease-in-out z-50
-                ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-                <div className="relative h-full">
-                  {/* Close Button */}
-                  <button
-                    onClick={() => setIsMenuOpen(false)}
-                    className="absolute top-6 right-6 w-12 h-12 flex items-center justify-center rounded-full border-2 border-[#42dcdb] group hover:border-[#8558ff] transition-all duration-300 z-50"
-                  >
-                    <div className="relative w-full h-full">
-                      {/* X Symbol */}
-                      <span className="absolute top-1/2 left-1/2 w-6 h-[2px] bg-[#42dcdb] group-hover:bg-[#8558ff] -translate-x-1/2 -translate-y-1/2 rotate-45 transition-all duration-300"></span>
-                      <span className="absolute top-1/2 left-1/2 w-6 h-[2px] bg-[#42dcdb] group-hover:bg-[#8558ff] -translate-x-1/2 -translate-y-1/2 -rotate-45 transition-all duration-300"></span>
-                      
-                      {/* Glowing Ring */}
-                      <div className="absolute inset-0 rounded-full transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(133,88,255,0.3)] shadow-[0_0_15px_rgba(66,220,219,0.3)]"></div>
-                      
-                      {/* Pulsing Background */}
-                      <div className="absolute inset-0 rounded-full bg-[#42dcdb] opacity-0 group-hover:opacity-5 transition-all duration-300 animate-pulse"></div>
-                    </div>
-                  </button>
-
-                  {/* Decorative Elements */}
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(66,220,219,0.1),transparent_50%)]"></div>
-                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(133,88,255,0.1),transparent_50%)]"></div>
-                  
-                  {/* Grid Pattern */}
-                  <div className="absolute inset-0 bg-[linear-gradient(rgba(66,220,219,0.05)_1px,transparent_1px),linear-gradient(to_right,rgba(66,220,219,0.05)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-                  
-                  {/* Menu Links Container */}
-                  <div className="flex flex-col items-center justify-center h-full space-y-8 relative z-10">
-                    <Link 
-                      to="/about" 
-                      className="text-[#42dcdb] hover:text-[#8558ff] transition-all duration-300 font-['Bruno_Ace_SC'] text-2xl hover:scale-110 hover:shadow-[0_0_15px_rgba(66,220,219,0.3)]"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      About
-                    </Link>
-                    <Link 
-                      to="/services" 
-                      className="text-[#42dcdb] hover:text-[#8558ff] transition-all duration-300 font-['Bruno_Ace_SC'] text-2xl hover:scale-110 hover:shadow-[0_0_15px_rgba(66,220,219,0.3)]"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Services
-                    </Link>
-                    <Link 
-                      to="/portfolio" 
-                      className="text-[#42dcdb] hover:text-[#8558ff] transition-all duration-300 font-['Bruno_Ace_SC'] text-2xl hover:scale-110 hover:shadow-[0_0_15px_rgba(66,220,219,0.3)]"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Portfolio
-                    </Link>
-                    <Link 
-                      to="/contact" 
-                      className="text-[#42dcdb] hover:text-[#8558ff] transition-all duration-300 font-['Bruno_Ace_SC'] text-2xl hover:scale-110 hover:shadow-[0_0_15px_rgba(66,220,219,0.3)]"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Contact
-                    </Link>
-                    
-                    {/* Action Buttons */}
-                    <div className="flex flex-col space-y-4 mt-8">
-                      <Link
-                        to="/contact"
-                        className="text-[#42dcdb] hover:bg-[#42dcdb] hover:text-gray-900 px-8 py-3 rounded-lg border border-[#42dcdb] transition-all duration-300 font-['Bruno_Ace_SC'] text-lg hover:shadow-[0_0_15px_rgba(66,220,219,0.5)]"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Get Quote
-                      </Link>
-                      <Link
-                        to="/portfolio"
-                        className="bg-[#42dcdb] text-gray-900 px-8 py-3 rounded-lg transition-all duration-300 font-['Bruno_Ace_SC'] text-lg hover:bg-[#8558ff] hover:text-white hover:shadow-[0_0_15px_rgba(133,88,255,0.5)]"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Our Work
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Decorative Circles */}
-                  <div className="absolute top-20 right-20 w-32 h-32 border-2 border-[#42dcdb20] rounded-full animate-spin-slow"></div>
-                  <div className="absolute bottom-20 left-20 w-32 h-32 border-2 border-[#8558ff20] rounded-full animate-spin-slow delay-300"></div>
-                </div>
-              </div>
-
-              {/* Desktop Navigation Items */}
-              <div className="hidden md:flex items-center space-x-8">
-                <Link to="/about" className="text-[#42dcdb] hover:text-[#8558ff] transition-colors duration-300 font-['Bruno_Ace_SC'] text-sm">
-                  About
-                </Link>
-                <Link to="/services" className="text-[#42dcdb] hover:text-[#8558ff] transition-colors duration-300 font-['Bruno_Ace_SC'] text-sm">
-                  Services
-                </Link>
-                <Link to="/portfolio" className="text-[#42dcdb] hover:text-[#8558ff] transition-colors duration-300 font-['Bruno_Ace_SC'] text-sm">
-                  Portfolio
-                </Link>
-                <Link to="/contact" className="text-[#42dcdb] hover:text-[#8558ff] transition-colors duration-300 font-['Bruno_Ace_SC'] text-sm">
-                  Contact
-                </Link>
-              </div>
-
-              {/* Desktop Action Buttons */}
-              <div className="hidden md:flex items-center space-x-4">
-                <Link
-                  to="/contact"
-                  className="text-[#42dcdb] hover:bg-[#42dcdb] hover:text-gray-900 px-4 py-2 rounded-lg border border-[#42dcdb] transition-all duration-300 font-['Bruno_Ace_SC'] text-sm hover:shadow-[0_0_15px_rgba(66,220,219,0.5)]"
-                >
-                  Get Quote
-                </Link>
-                <Link
-                  to="/portfolio"
-                  className="bg-[#42dcdb] text-gray-900 px-4 py-2 rounded-lg transition-all duration-300 font-['Bruno_Ace_SC'] text-sm hover:bg-[#8558ff] hover:text-white hover:shadow-[0_0_15px_rgba(133,88,255,0.5)]"
-                >
-                  Our Work
-                </Link>
-              </div>
-            </div>
-          </nav>
+          <Nav />
 
           {/* Hero Content */}
           <div className="flex items-center justify-center min-h-[calc(100vh-5rem)]">
@@ -215,15 +64,15 @@ const Home = () => {
               <div className="flex flex-col md:flex-row items-center justify-between gap-8">
                 {/* Text Content */}
                 <div className="flex-1 text-center md:text-left">
-                  <h1 className="text-5xl md:text-6xl font-normal text-[#42dcdb] mb-12 font-['Bruno_Ace_SC'] tracking-wider leading-relaxed drop-shadow-[0_0_10px_rgba(66,220,219,0.3)]">
+                  <h1 className="text-3xl md:text-4xl lg:text-6xl font-normal text-[#42dcdb] mb-6 md:mb-8 lg:mb-12 font-['Bruno_Ace_SC'] tracking-wider leading-relaxed drop-shadow-[0_0_10px_rgba(66,220,219,0.3)]">
                     Welcome to Virohana Tech
                   </h1>
-                  <p className="text-xl md:text-2xl text-[#8558ff] mb-16 max-w-2xl mx-auto md:mx-0 font-['Bruno_Ace_SC'] tracking-wide leading-relaxed drop-shadow-[0_0_8px_rgba(133,88,255,0.3)]">
+                  <p className="text-lg md:text-xl lg:text-2xl text-[#8558ff] mb-8 md:mb-12 lg:mb-16 max-w-2xl mx-auto md:mx-0 font-['Bruno_Ace_SC'] tracking-wide leading-relaxed drop-shadow-[0_0_8px_rgba(133,88,255,0.3)]">
                     Crafting stunning, future-ready websites that elevate your business to new heights. Your vision, our expertise.
                   </p>
                   <Link
                     to="/contact"
-                    className="bg-gradient-to-r from-[#42dcdb] to-[#8558ff] text-white px-10 py-4 rounded-lg text-lg font-['Bruno_Ace_SC'] transition-all duration-300 tracking-wider hover:shadow-[0_0_20px_rgba(66,220,219,0.5)] hover:scale-105 inline-block"
+                    className="bg-gradient-to-r from-[#42dcdb] to-[#8558ff] text-white px-6 md:px-8 lg:px-10 py-3 md:py-4 rounded-lg text-base md:text-lg font-['Bruno_Ace_SC'] transition-all duration-300 tracking-wider hover:shadow-[0_0_20px_rgba(66,220,219,0.5)] hover:scale-105 inline-block"
                   >
                     Start Your Project
                   </Link>
@@ -252,7 +101,7 @@ const Home = () => {
       </div>
 
       {/* About Section with Futuristic Gradient */}
-      <div className="relative bg-[linear-gradient(130deg,#0f1729_0%,#1a103c_50%,#251844_100%)] py-24 overflow-hidden">
+      <div id="about" className="relative bg-[linear-gradient(130deg,#0f1729_0%,#1a103c_50%,#251844_100%)] py-16 md:py-20 lg:py-24 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(66,220,219,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,rgba(133,88,255,0.15),transparent_50%)]"></div>
@@ -279,11 +128,11 @@ const Home = () => {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto">
             {/* About Section Title */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-normal text-[#42dcdb] font-['Bruno_Ace_SC'] tracking-wider drop-shadow-[0_0_10px_rgba(66,220,219,0.3)] mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-normal text-[#42dcdb] font-['Bruno_Ace_SC'] tracking-wider drop-shadow-[0_0_10px_rgba(66,220,219,0.3)] mb-3 md:mb-4">
                 About Us
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#42dcdb] to-[#8558ff] mx-auto rounded-full"></div>
+              <div className="w-24 md:w-32 lg:w-40 h-0.5 md:h-1 bg-gradient-to-r from-[#42dcdb] to-[#8558ff] mx-auto rounded-full"></div>
             </div>
 
             {/* About Content */}
@@ -329,7 +178,7 @@ const Home = () => {
                   {/* CTA Button */}
                   <div className="text-center md:text-left pt-6">
                     <Link
-                      to="/about"
+                      to="/projects"
                       className="inline-flex items-center space-x-2 bg-transparent border-2 border-[#42dcdb] text-[#42dcdb] px-8 py-3 rounded-lg text-base font-['Bruno_Ace_SC'] transition-all duration-300 hover:bg-[#42dcdb] hover:text-gray-900 hover:shadow-[0_0_20px_rgba(66,220,219,0.3)]"
                     >
                       <span>Learn More</span>
@@ -393,15 +242,15 @@ const Home = () => {
         {/* Grid Overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(66,220,219,0.03)_1px,transparent_1px),linear-gradient(to_right,rgba(133,88,255,0.03)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
 
-        <div className="container mx-auto px-6 relative py-24">
+        <div className="container mx-auto px-6 relative py-16 md:py-20 lg:py-24">
           <div className="max-w-7xl mx-auto">
             {/* Why Choose Us Section Title */}
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-normal text-[#42dcdb] font-['Bruno_Ace_SC'] tracking-wider drop-shadow-[0_0_10px_rgba(66,220,219,0.3)] mb-4">
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="text-2xl md:text-3xl lg:text-5xl font-normal text-[#42dcdb] font-['Bruno_Ace_SC'] tracking-wider drop-shadow-[0_0_10px_rgba(66,220,219,0.3)] mb-3 md:mb-4">
                 Why Choose Us
               </h2>
-              <div className="w-24 h-1 bg-gradient-to-r from-[#42dcdb] to-[#8558ff] mx-auto rounded-full mb-6"></div>
-              <p className="text-lg md:text-xl text-[#8558ff] font-['Bruno_Ace_SC'] max-w-3xl mx-auto">
+              <div className="w-24 md:w-32 lg:w-40 h-0.5 md:h-1 bg-gradient-to-r from-[#42dcdb] to-[#8558ff] mx-auto rounded-full mb-4 md:mb-6"></div>
+              <p className="text-base md:text-lg lg:text-xl text-[#8558ff] font-['Bruno_Ace_SC'] max-w-3xl mx-auto px-4">
                 Experience excellence in digital innovation with our expert team and cutting-edge solutions
               </p>
             </div>
