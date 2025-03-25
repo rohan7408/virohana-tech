@@ -143,13 +143,21 @@ const Home = () => {
                   {/* Main Description */}
                   <div className="space-y-4">
                     <p className="text-lg md:text-xl text-[#42dcdb] font-['Bruno_Ace_SC'] leading-relaxed">
-                      Virohana Tech, a subsidiary of Virohana, specializes in developing web applications using cutting-edge frameworks and tools.
+                      Empowering Your Business With Our Website Solutions
                     </p>
                     <p className="text-base text-[#8558ff] font-['Bruno_Ace_SC'] leading-relaxed opacity-80">
-                      With a team of skilled developers and designers, we transform complex ideas into elegant digital solutions.
+                      At virohana tech, we provide end-to-end web development services that result in customer satisfaction by helping clients earn a good ROI on their investments. Our development solutions focus on boosting brand growth, establishing credibility and trust, and improving overall user experience.
                     </p>
                   </div>
                   
+                  {/* Company Background */}
+                  <div className="space-y-4">
+                    <h3 className="text-xl md:text-2xl text-[#42dcdb] font-['Bruno_Ace_SC']">Company Background</h3>
+                    <p className="text-base text-[#8558ff] font-['Bruno_Ace_SC'] leading-relaxed opacity-80">
+                      Welcome to Viohana where innovation meets excellence in software development. Founded in 2021 by Reshma Poudel, an experienced software developer with five years of industry expertise, our company is dedicated to providing top-notch digital solutions tailored to your business needs.
+                    </p>
+                  </div>
+
                   {/* Stats Grid */}
                   <div className="grid grid-cols-2 gap-6 py-6">
                     <div className="text-center p-4 rounded-xl bg-[#42dcdb15] border border-[#42dcdb20]">
@@ -169,11 +177,6 @@ const Home = () => {
                       </div>
                     </div>
                   </div>
-
-                  {/* Mission Statement */}
-                  <p className="text-lg md:text-xl text-[#8558ff] font-['Bruno_Ace_SC'] leading-relaxed">
-                    We are committed to delivering innovative and reliable digital solutions.
-                  </p>
 
                   {/* CTA Button */}
                   <div className="text-center md:text-left pt-6">

@@ -38,7 +38,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gray-900 border-t border-gray-800">
+    <footer className="bg-[#1a103c] bg-opacity-50 backdrop-blur-xl border-t border-[#42dcdb20]">
       <div className="container mx-auto px-6 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -50,126 +50,209 @@ const Footer = () => {
                 className="h-10 w-auto transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
-            <p className="text-gray-400 mt-4">
+            <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] leading-relaxed">
               Crafting digital excellence with cutting-edge solutions for tomorrow's challenges.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
+            <h3 className="text-lg font-['Bruno_Ace_SC'] text-[#42dcdb] mb-6">Quick Links</h3>
+            <ul className="space-y-3">
               <li>
-                <a
-                  href="#about"
-                  onClick={handleAboutClick}
-                  className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300"
-                >
-                  About Us
-                </a>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <a
+                    href="#about"
+                    onClick={handleAboutClick}
+                    className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300"
+                  >
+                    About Us
+                  </a>
+                </div>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
-                  Services
-                </Link>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <Link 
+                    to="/services" 
+                    className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300"
+                  >
+                    Services
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link to="/projects" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
-                  Projects
-                </Link>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <Link 
+                    to="/projects" 
+                    className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300"
+                  >
+                    Projects
+                  </Link>
+                </div>
               </li>
               <li>
-                <Link to="/contact" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
-                  Contact
-                </Link>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <Link 
+                    to="/contact" 
+                    className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300"
+                  >
+                    Contact
+                  </Link>
+                </div>
               </li>
             </ul>
           </div>
 
-          {/* Services */}
-          <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
+          {/* Services Section */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-['Bruno_Ace_SC'] text-[#42dcdb] mb-6">Our Services</h3>
+            <ul className="space-y-3">
               <li>
-                <a
-                  href="#web-development"
-                  onClick={(e) => handleServiceClick(e, 'web-development')}
-                  className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300"
-                >
-                  Web Development
-                </a>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300">
+                    Website Development
+                  </p>
+                </div>
               </li>
               <li>
-                <a
-                  href="#technical-support"
-                  onClick={(e) => handleServiceClick(e, 'technical-support')}
-                  className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300"
-                >
-                  Technical Support
-                </a>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300">
+                    WordPress Solutions
+                  </p>
+                </div>
               </li>
               <li>
-                <a
-                  href="#it-consulting"
-                  onClick={(e) => handleServiceClick(e, 'it-consulting')}
-                  className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300"
-                >
-                  IT Consulting
-                </a>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300">
+                    Web Application Development
+                  </p>
+                </div>
               </li>
               <li>
-                <a
-                  href="#digital-marketing"
-                  onClick={(e) => handleServiceClick(e, 'digital-marketing')}
-                  className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300"
-                >
-                  Digital Marketing
-                </a>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300">
+                    Logo & Brochure Design
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300">
+                    IT Support & Website Maintenance
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300">
+                    Customer Support Services
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300">
+                    Website Hosting
+                  </p>
+                </div>
               </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-4">Contact Us</h3>
-            <ul className="space-y-2">
-              <li className="text-gray-400">
-                Utah, USA
+            <h3 className="text-lg font-['Bruno_Ace_SC'] text-[#42dcdb] mb-6">Contact Us</h3>
+            <ul className="space-y-3">
+              <li>
+                <div className="flex items-center gap-3 group">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <span className="text-[#8558ff] text-sm font-['Bruno_Ace_SC']">
+                    Utah, USA
+                  </span>
+                </div>
               </li>
               <li>
-                <a href="mailto:info@virohanatech.com" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
-                  info@virohanatech.com
-                </a>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <a 
+                    href="mailto:info@virohanatech.com" 
+                    className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300"
+                  >
+                    info@virohanatech.com
+                  </a>
+                </div>
               </li>
               <li>
-                <a href="tel:+13852075748" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
-                  +13852075748
-                </a>
+                <div className="flex items-center gap-3 group cursor-pointer">
+                  <div className="w-1.5 h-1.5 rounded-full bg-[#42dcdb]"></div>
+                  <a 
+                    href="tel:+13852075748" 
+                    className="text-[#8558ff] text-sm font-['Bruno_Ace_SC'] group-hover:text-[#42dcdb] transition-colors duration-300"
+                  >
+                    +1 385 207 5748
+                  </a>
+                </div>
               </li>
             </ul>
           </div>
         </div>
 
         {/* Social Links & Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
+        <div className="mt-12 pt-8 border-t border-[#42dcdb20]">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">
+            <p className="text-[#8558ff] text-sm font-['Bruno_Ace_SC']">
               © 2024 Virohana Tech. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="https://www.facebook.com/profile.php?id=61574694175194" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
+              <a 
+                href="https://www.facebook.com/profile.php?id=61574694175194" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#8558ff] hover:text-[#42dcdb] transition-colors duration-300"
+              >
                 <FaFacebookF className="w-5 h-5" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#8558ff] hover:text-[#42dcdb] transition-colors duration-300"
+              >
                 <FaTwitter className="w-5 h-5" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#8558ff] hover:text-[#42dcdb] transition-colors duration-300"
+              >
                 <FaInstagram className="w-5 h-5" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#8558ff] hover:text-[#42dcdb] transition-colors duration-300"
+              >
                 <FaLinkedinIn className="w-5 h-5" />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-[#42dcdb] transition-colors duration-300">
+              <a 
+                href="#" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-[#8558ff] hover:text-[#42dcdb] transition-colors duration-300"
+              >
                 <FaGithub className="w-5 h-5" />
               </a>
             </div>
